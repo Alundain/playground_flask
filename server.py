@@ -6,10 +6,9 @@ app = Flask(__name__)
 def level_one():
     return render_template('index.html', num=3, color="blue")
 
-
 @app.route('/play/<int:num>')
 def level_two(num):
-    return render_template('index.html', num=num, color="blue")
+    return render_template('index.html', num=num, color="red")
 
 @app.route('/play/<int:num>/<string:color>')
 def level_tree(num, color):
